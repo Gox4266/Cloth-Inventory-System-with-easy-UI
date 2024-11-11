@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    gap: 20px;
+    flex-wrap: wrap;
+    background: linear-gradient(to right, lightblue, lightgreen);
+}
+
+.container {
+    width: 600px;
+    padding: 20px;
+    background-color: #c8f3f8;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    flex: 1 1 40%;
+    margin: 2%;
+}
+
+.container1 {
+    width: 600px;
+    padding: 20px;
+    background-color: #69e8f6;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    margin: 2%;
+    flex: 1 1 30%;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+.receipt-header {
+    text-align: center;
+    /* font-weight: bold; */
+    /* font-size: 1.8em; */
+    margin-bottom: 20px;
+    color: #212121;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+table, th, td {
+    border: 1px solid #4b4747;
+    padding: 10px;
+    border-radius: 15px;
+    border-color: #007BFF;
+}
+
+th {
+    background-color: #f9dddd;
+    text-align: center;
+}
+td {
+    text-align: center;
+}
+
+.total {
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+
+input[type="text"], input[type="number"],.cuname {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #aba9a9;
+    border-radius: 5px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+}
+.hiddeninput{
+    background-color: #c8f3f8;
+    border: hidden;
+    width: 50%;
+    padding: 5px;
+    border: none;
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+    }
+
+.submitbtn1{
+    visibility: hidden;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+
+}
+
+.receipt-footer{
+    text-align: center;
+}
+
+div .receipt-total{
+    text-align: right;
+}
+
+.print{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #589feb;
+    border-color: #f9dddd;
+}
+
+.none{
+display: none;
+}
+
+label{
+    color: #002246;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+select{
+    width: 250px;
+    height: 35px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 23px;
+    color: #007BFF;
+    border-radius: 5px;
+}
+
+.btn{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 10px;
+    padding: 10px;
+    align-self: center;
+    background-color: #ce69f6;
+    border-color: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(43, 44, 44);
+    border: none;
+}
+
+.indrbtn{
+    text-align: center;
+    font-weight: bold;
+    color: #ad049c;
+    background-color: #dde8f3;
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.receipt-header{
+    background-color: #f3b297;
+    padding: 10px;
+    border-radius: 10px;    
+}

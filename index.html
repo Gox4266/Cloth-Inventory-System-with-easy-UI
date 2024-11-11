@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Denim Junction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container1">
+        <div class="name">
+            <label for="name">Name:</label>
+            <br><br>
+            <input type="text" id="myInput" placeholder="Enter your name">
+            <br><br>
+            <label for="Monumber">Mobile Number:</label>
+            <br><br>
+            <input type="number" name="number" id="mynumberinput" placeholder="Enter mobile number">
+            <br><br>
+            <label for="item">Item</label><br><br>
+            <select name="item-list" id="itemDropdown">
+                <option value="T-Shirt">T-Shirt</option>
+                <option value="Jeanse">Jeanse</option>
+                <option value="FormalS">Formal Shirt</option>
+                <option value="FormalP">Formal Pant</option>
+                <option value="FormalP">Kurti</option>
+                <option value="FormalP">Under/Inner Garments</option>
+                <option value="FormalP">More content here</option>
+                <option value="FormalP">More content here</option>
+                <option value="FormalP">More content here</option>
+                <option value="FormalP">Other</option>
+            </select>
+            <br><br>
+            <label for="Quantity">Quantity</label>
+            <br><br>
+            <div class="quantity-controls">
+                <button class="indrbtn" onclick="changeQuantity(-1)">-</button>
+                <input type="number" id="itemQty" value="1" min="1" style="width: 50px; text-align: center;">
+                <button class="indrbtn"  onclick="changeQuantity(1)">+</button>
+            </div>
+            <br><br>
+            <label for="Price">Price</label>
+            <br><br>
+            <input type="number" name="Price" id="itemPrice" placeholder="Price">
+        </div> 
+        <div class="btns">
+            <button class="btn" onclick="addItem()">ADD ITEM</button>
+            <button class="btn" onclick="printDiv()">Print</button>
+            <button class="btn" onclick="location.reload()">New Receipt</button>   
+            <button class="btn" id="submitprint">Submit and Print</button>   
+        </div>          
+</div>
+    <div class="container" id="printableDiv">
+        <form action="save_order.php" method="post">
+            <div class="receipt-header">
+                <h2>Denim Junction</h2>
+                <p>Quality Product, Trusted, Value for Money...</p>
+                <p>Phone: 9172290684</p>
+                <p>Date: <span id="date"></span></p>
+            </div>
+
+            <div class="customer-name">
+                <h3>Receipt for: <input name="customer_name" id="mySpan" class="hiddeninput" value=""></h3>
+            </div>
+            <div class="none">
+                <input class="hiddeninput" id="mynumber" name="monumber" value="">
+            </div>
+            <!-- <div class="receipt-details">
+                <p>Order ID: <span class="receipt-details"></span></p>
+            </div> -->
+
+            <div class="item-list">
+                <table id="itemsTable">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="itemBody">
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="receipt-total">
+                <p>Total: <input id="total" name="totalp" class="hiddeninput"></p>
+                
+            </div>
+
+            <div class="receipt-footer">
+                <p>Thank you for shopping with us, <input id="mySpan1" name="customername" class="hiddeninput" value=""></input></p>
+            </div>
+        <button id="submitbtn" class="submitbtn1">submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>   
+</body>
+</html>
